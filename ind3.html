@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Tantra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <h2>Upload your Documents</h2>
+       <form action="">
+        <label for="">Recent passport size photograph <span>*</span></label><br>
+        <input type="file" required id="file" onChange="Filevalidation()"><br>
+        <label for="">HSC mark sheet  <span>*</span></label><br>
+        <input type="file" required><br>
+        <label for="">SSC mark sheet <span>*</span></label><br>
+        <input type="file" required><br>
+        <label for="">All semesters mark sheet in a single PDF or docs <span>*</span></label><br>
+        <input type="file" required><br>
+        <input type="submit" value="Submit">
+       </form>
+
+       
+        </form>
+
+    </div>
+</body>
+<script>
+    
+     const Filevalidation = () => {
+            const fi = document.getElementById('file');
+            // Check if any file is selected.
+            if (fi.files.length > 0) {
+                for (const i = 0; i <= fi.files.length - 1; i++) {
+                    
+                    const fsize = fi.files.item(i).size;
+                    const file = Math.round((fsize / 1024));
+                    // The size of the file.
+                    if (file >= 4096) {
+                        alert(
+                          "File too Big, please select a file less than 4mb");
+                    } else if (file < 2048) {
+                        alert(
+                          "File too small, please select a file greater than 2mb");
+                    } else {
+                        document.getElementById('size').innerHTML = '<b>'
+                        + file + '</b> KB';
+                    }
+                }
+            }
+        }
+</script>
+</html>

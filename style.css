@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+body{
+    margin: 15px 30px;
+    font-size: 17px;
+    padding: 8px; 
+}
+.container{
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+input[type="text"],
+input[type="mail"],
+input[type="number"],
+input[type="date"],
+select{
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+input[type="submit"]{
+    background-color: rgb(38, 116, 232);
+    padding: 12px 20px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 10%;
+    margin-left: 45%;
+}
+span{
+    color: red;
+}
